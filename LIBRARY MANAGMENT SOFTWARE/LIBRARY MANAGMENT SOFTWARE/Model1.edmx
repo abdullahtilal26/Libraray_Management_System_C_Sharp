@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Hfs_Lib_ManModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="Hfs_Lib_ManModelStoreContainer">
+          <EntitySet Name="bok_isu" EntityType="Hfs_Lib_ManModel.Store.bok_isu" store:Type="Tables" store:Schema="dbo" store:Name="bok_isu">
+            <DefiningQuery>SELECT 
+      [bok_isu].[Id] AS [Id], 
+      [bok_isu].[Gr_#] AS [Gr_#], 
+      [bok_isu].[Borrowers_Name] AS [Borrowers_Name], 
+      [bok_isu].[Class] AS [Class], 
+      [bok_isu].[Book_Name] AS [Book_Name], 
+      [bok_isu].[Book_Id] AS [Book_Id], 
+      [bok_isu].[Issuing_Date] AS [Issuing_Date], 
+      [bok_isu].[Due_Date] AS [Due_Date], 
+      [bok_isu].[Received] AS [Received]
+      FROM [dbo].[bok_isu] AS [bok_isu]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'hfs_lib_man.dbo.bok_isu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="bok_isu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Gr_#" Type="varchar" MaxLength="50" />
+          <Property Name="Borrowers_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Class" Type="varchar" MaxLength="50" />
+          <Property Name="Book_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Book_Id" Type="varchar" MaxLength="50" />
+          <Property Name="Issuing_Date" Type="varchar" MaxLength="50" />
+          <Property Name="Due_Date" Type="varchar" MaxLength="50" />
+          <Property Name="Received" Type="varchar" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Hfs_Lib_ManModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Hfs_Lib_ManEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="bok_isu" EntityType="Hfs_Lib_ManModel.bok_isu" />
+        </EntityContainer>
+        <EntityType Name="bok_isu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Gr__" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Borrowers_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Class" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Book_Name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Book_Id" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Issuing_Date" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Due_Date" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Received" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Hfs_Lib_ManModelStoreContainer" CdmEntityContainer="Hfs_Lib_ManEntities">
+          <EntitySetMapping Name="bok_isu">
+            <EntityTypeMapping TypeName="Hfs_Lib_ManModel.bok_isu">
+              <MappingFragment StoreEntitySet="bok_isu">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Gr__" ColumnName="Gr_#" />
+                <ScalarProperty Name="Borrowers_Name" ColumnName="Borrowers_Name" />
+                <ScalarProperty Name="Class" ColumnName="Class" />
+                <ScalarProperty Name="Book_Name" ColumnName="Book_Name" />
+                <ScalarProperty Name="Book_Id" ColumnName="Book_Id" />
+                <ScalarProperty Name="Issuing_Date" ColumnName="Issuing_Date" />
+                <ScalarProperty Name="Due_Date" ColumnName="Due_Date" />
+                <ScalarProperty Name="Received" ColumnName="Received" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="Hfs_Lib_ManModel.bok_isu" Width="1.5" PointX="0.75" PointY="0.75" Height="2.7494921874999996" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
